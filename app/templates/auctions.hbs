@@ -1,5 +1,10 @@
+<ul>
 {{#each model as |auction|}}
- <li>{{#link-to 'auction' auction.id}}{{auction.title}}{{/link-to}}, price: {{auction.price}}</li>
+<li>
+  {{#link-to 'auction' auction.id}}
+    {{auction.title}}
+  {{/link-to}},
+  price: {{auction.price}}
+</li>
 {{/each}}
-
-{{outlet}}
+</ul>
