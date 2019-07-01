@@ -1,9 +1,9 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default class AuctionRoute extends Route {
   
   model(params) {
     return this.store.findRecord('auction', params.id, { reload: true });
   }
-  
-});
+
+}
