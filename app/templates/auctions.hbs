@@ -1,10 +1,9 @@
 <ul>
-{{#each model as |auction|}}
-<li>
-  {{#link-to 'auction' auction.id}}
-    {{auction.title}}
-  {{/link-to}},
-  price: {{auction.price}}
-</li>
+{{#each this.model as |auction|}}
+  <li>
+    <LinkTo @route="auction" @model={{auction}}>
+      {{auction.title}}
+    </LinkTo>, price: {{auction.price}}
+  </li>
 {{/each}}
 </ul>
